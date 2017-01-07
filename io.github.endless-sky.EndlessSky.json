@@ -6,6 +6,8 @@
   "runtime-version": "1.4",
   "sdk": "org.freedesktop.Sdk",
   "command": "endless-sky",
+  "rename-desktop-file": "endless-sky.desktop",
+  "rename-icon": "endless-sky",
   "finish-args": [
     "--share=network",
     "--socket=pulseaudio",
