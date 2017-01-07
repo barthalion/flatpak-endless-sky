@@ -1,0 +1,17 @@
+{
+  "name": "scons",
+  "cleanup": [ "*" ],
+  "no-autogen": true,
+  "sources": [
+    {
+      "type": "archive",
+      "url": "http://downloads.sourceforge.net/project/scons/scons/2.4.1/scons-2.4.1.tar.gz",
+      "sha256": "8fc4f42928c69bcbb33e1be94b646f2c700b659693fabc778c192d4d22f753a7"
+    },
+    {
+      "type": "file",
+      "path": "modules/scons-Makefile",
+      "dest-filename": "Makefile"
+    }
+  ]
+}
