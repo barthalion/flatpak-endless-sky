@@ -1,9 +1,9 @@
 {
   "id": "io.github.EndlessSky.endless-sky",
-  "version": "0.9.4",
+  "version": "0.9.6",
   "branch": "stable",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "1.4",
+  "runtime-version": "1.6",
   "sdk": "org.freedesktop.Sdk",
   "command": "endless-sky",
   "rename-desktop-file": "endless-sky.desktop",
@@ -18,26 +18,23 @@
     "modules/openal-1.17.2.json",
     "modules/glew-2.0.0.json",
     "modules/glu-9.0.0.json",
+    "modules/libmad-0.15.1b.json",
     {
       "name": "endless-sky",
-      "no-autogen": true,
+      "buildsystem": "simple",
+      "build-commands": [
+        "CPPPATH=/app/include scons PREFIX=/app install -j4",
+        "install -Dm755 launcher /app/bin/endless-sky"
+      ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/endless-sky/endless-sky/archive/v0.9.4.tar.gz",
-          "sha256": "8e25b9c387736d10034396940974cd442b8a7c6e9647a12c6d08fbeed9d32eeb"
-        },
-        {
-          "type": "file",
-          "path": "Makefile"
+          "url": "https://github.com/endless-sky/endless-sky/archive/v0.9.6.tar.gz",
+          "sha256": "41699dabb72a276c96019d0714e54492866e29661f161052a1caf334332be1e4"
         },
         {
           "type": "file",
           "path": "launcher"
-        },
-        {
-          "type": "patch",
-          "path": "SConstruct.patch"
         }
       ]
     }
